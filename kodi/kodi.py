@@ -29,5 +29,6 @@ def getCleanData():
 	elif args.dir == "movies":
 		return {"jsonrpc": "2.0", "method": "VideoLibrary.Clean", "id": "pyScript", "params":{"directory":"smb://192.168.1.202/x264/"}}
 
-print(args.action, "->", args.dir)
-r = requests.post(url, json=getData())
+def __main__():
+  print(args.action, "->", args.dir)
+  r = requests.post(url, json=getData())
