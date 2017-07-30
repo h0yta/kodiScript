@@ -1,5 +1,7 @@
 from setuptools import setup, find_packages
 
+# Install requeried dependecies
+pip3 install -r requests
 
 with open('README.md') as f:
     readme = f.read()
