@@ -56,5 +56,6 @@ class BasicTestSuite(unittest.TestCase):
       self.assertEqual(res['id'], "pyScript")
       self.assertTrue('params' in res)
       self.assertTrue('directory' in res['params'])
+
 if __name__ == '__main__':
     unittest.main()
