@@ -1,4 +1,6 @@
-from time import gmtime, strftime
+from time import strftime
+from datetime import datetime
+import tzlocal
 import json
 import requests
 import argparse
@@ -13,7 +15,7 @@ args = parser.parse_args()
 
 
 def __main__():
-    print(strftime("%Y-%m-%d %H:%M:%S", gmtime()), args.action, "->", args.dir)
+    print(datetime.now(tzlocal.get_localzone()).strftime("%Y-%m-%d %H:%M:%S"), args.action, "->", args.dir)
     requests.post(helpers.getURL(), json=helpers.getData(args.action, args.dir))
 
 if __name__ == '__main__':
