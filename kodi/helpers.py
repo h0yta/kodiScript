@@ -13,8 +13,6 @@ def getData(action, dir):
 def getScanData(dir):
     if dir == "all":
       return {"jsonrpc": "2.0", "method": "VideoLibrary.Scan", "id": "pyScript"}
-    elif dir == "tv":
-      return {"jsonrpc": "2.0", "method": "VideoLibrary.Scan", "id": "pyScript", "params": {"directory": config.tvDir}}
     elif dir == "series":
       return {"jsonrpc": "2.0", "method": "VideoLibrary.Scan", "id": "pyScript", "params": {"directory": config.seriesDir}}
     elif dir == "movies":
@@ -24,8 +22,6 @@ def getScanData(dir):
 def getCleanData(dir):
     if dir == "all":
       return {"jsonrpc": "2.0", "method": "VideoLibrary.Clean", "id": "pyScript"}
-    elif dir == "tv":
-      return {"jsonrpc": "2.0", "method": "VideoLibrary.Clean", "id": "pyScript", "params": {"directory": config.tvDir}}
     elif dir == "series":
       return {"jsonrpc": "2.0", "method": "VideoLibrary.Clean", "id": "pyScript", "params": {"directory": config.seriesDir}}
     elif dir == "movies":
