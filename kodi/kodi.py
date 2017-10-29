@@ -16,7 +16,8 @@ args = parser.parse_args()
 
 def __main__():
     print(datetime.now(tzlocal.get_localzone()).strftime("%Y-%m-%d %H:%M:%S"), args.action, "->", args.dir)
-    requests.post(helpers.getURL(), json=helpers.getData(args.action, args.dir))
+    r = requests.post(helpers.getURL(), json=helpers.getData(args.action, args.dir))
+    print(r.status_code)
 
 if __name__ == '__main__':
   __main__()
